@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone and clean') {
             steps {
-		sj 'rm -rf my-app'
+		sh 'rm -rf my-app'
                 sh 'git clone https://github.com/venkatcope/my-app'
 		sh 'mvn clean'
             }
